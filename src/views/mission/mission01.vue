@@ -1,0 +1,29 @@
+<script setup>
+import { onMounted } from 'vue';
+
+const students = [
+  { name: '수영', present: true },
+  { name: '준하', present: false },
+  { name: '가은', present: true },
+  { name: '수빈', present: true },
+  { name: '예림', present: false },
+  { name: '준이', present: false }
+];
+</script>
+
+<template>
+<h3>Mission01.vue</h3>
+<!-- v-for로 div태그로 감싸진 학생이름이 출력되게 해주세요. -->
+<!-- present값이 ture면 '출석' 표시 -->
+<div v-for="(item,idx) in students" :key="idx">{{ item.name }} 
+  {{ item.present ? '출석' : '' }}
+  <span v-if="item.present">출석</span>
+  <span v-show="item.present"> 출석</span>
+</div>
+<hr>
+
+</template>
+
+<style scoped>
+
+</style>
