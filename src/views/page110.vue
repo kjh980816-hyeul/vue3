@@ -11,6 +11,7 @@ const refSitUp = ref(0);
 
 const increasePushUp = () => {
   console.log(`pushUp: ${++pushUp}, refPushUp: ${++refPushUp.value}`);
+  //re 반응형 상태 객체의 값을 변경할 때는 value속성값을 변경하면 된다.
 };
 const increaseSitUp = () => {
   console.log(`sitUp: ${++sitUp}, refSitUp: ${++refSitUp.value}`);
