@@ -5,7 +5,7 @@ const router = createRouter({
   routes: globalState.map(item => {
       const firstChar = item.charAt(0).toUpperCase();
       const otherChars = item.slice(1);
-      const filePath = `../views${item.startsWith('mission') ? '/mission' : ''}/${firstChar + otherChars}.vue`;
+      const filePath = `../views${item.startsWith('Mission') ? '/mission' : ''}/${firstChar + otherChars}.vue`;
       console.log(filePath);
       return {
         path: `/${item}`,
